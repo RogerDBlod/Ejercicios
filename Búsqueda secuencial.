@@ -1,0 +1,26 @@
+import javax.swing.JOptionPane
+
+fun main () {
+
+    //[i]
+    var tabla = IntArray(10)
+    for (i in 0 until 10) {
+        tabla[i]=JOptionPane.showInputDialog("ingresa el elemento ${i+1} de la tabla").toInt()
+    }
+
+    var num = JOptionPane.showInputDialog("ingresa el num que buscas").toInt()
+    var numEncontrado = 0
+    for (i in 0 until 10){
+        if (num == tabla[i]){
+            numEncontrado = i
+        }
+    }
+
+    if(numEncontrado != 0){
+        println("el numero $num esta en el nivel $numEncontrado")
+    }else {
+    println("tu numero no esta :/")
+    }
+
+
+}
