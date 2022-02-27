@@ -21,6 +21,41 @@ fun main () {
     }else {
     println("tu numero no esta :/")
     }
-
-
 }
+
+// SEGUNDA VERSION
+
+import javax.swing.JOptionPane
+
+fun main(args: Array<String>) {
+
+    var cont = 0
+    var bandera = false
+    var numEncontrado = 0
+
+    var num = JOptionPane.showInputDialog("ingresa el numero que quieres buscar").toInt()
+    var cadena :IntArray = IntArray(10)
+
+    for (i in 0 until 10){
+        cadena[i] = JOptionPane.showInputDialog("ingresa el valor de la posicion ${i+1}").toInt()
+    }
+
+    while ( cont < 10 && bandera == false){
+println("esta es la vuelta num$cont")
+        for (i in 0 until 10){
+            println("esta es la vuelta num$i del ciclo for")
+            if (num == cadena[i]){
+                numEncontrado = i
+                bandera = true
+                break
+            }
+        }
+cont++
+    }
+    if (numEncontrado != 0){
+        println("tu numero $num esta en la posicion ${numEncontrado}")
+    }else{
+        println("no metiste el numero, entonces no esta en la lista5 ")
+    }
+}
+
