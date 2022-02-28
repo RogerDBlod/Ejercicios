@@ -1,0 +1,29 @@
+fun main(args: Array<String>) {
+    var fil = JOptionPane.showInputDialog("ingresa la cantidad de filas").toInt()
+    var col = JOptionPane.showInputDialog("ingresa la cantidad de columnas").toInt()
+    var arreglo = Array(fil){IntArray(col)}
+
+
+
+
+
+    for (i in 0 until fil) {
+
+        for (j in 0 until col) {
+            arreglo[i][j] = JOptionPane.showInputDialog("introduce el valor de la fila $i y de la columna $j").toInt()
+6
+        }
+
+    }
+    for (i in 0 until fil) {
+
+        for (j in 0 until col) {
+
+            print("${arreglo[i][j]},")
+
+        }
+        println("")
+
+    }
+
+}
