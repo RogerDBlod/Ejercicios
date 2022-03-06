@@ -1,0 +1,28 @@
+import javax.swing.JOptionPane
+
+
+fun main(args: Array<String>) {
+
+    var alum = Array(4){ Array<String?>(5){null} }
+
+    for(i in 0 until 4){
+        println("ingresa el nombre de alumno")
+        alum[i][0] = readLine()
+    }
+    for(i in 0 until 4){
+        println("ingresa el salon del alumn0")
+        alum[i][1] = readLine()
+    }
+    println("ingresa el salon del que quieres tus alumnos:")
+    var salon = readLine()
+
+    for (i in 0 until 4){
+        for (j in 0 until 2){
+            if (salon == alum[i][1])
+            print("${alum[i][j]} ")
+
+        }
+        println()
+
+    }
+}
