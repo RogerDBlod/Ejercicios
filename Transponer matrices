@@ -1,0 +1,39 @@
+import javax.swing.JOptionPane
+
+
+fun main(args: Array<String>) {
+
+    var fil = JOptionPane.showInputDialog("ingresa el num de filas").toInt()
+    var col = JOptionPane.showInputDialog("ingresa el num de colum").toInt()
+
+    var matriz = Array(fil) { IntArray(col) }
+    var matrix = Array(fil) { IntArray(col) }
+
+    if (fil == col) {
+        for (i in 0 until fil) {
+            for (j in 0 until col) {
+                matriz[i][j] = JOptionPane.showInputDialog("rellena la matriz en ${matriz[i][j]}").toInt()
+            }
+        }
+    }
+    for (i in 0 until fil) {
+        for (j in 0 until col) {
+            print(matriz[i][j])
+
+        }
+        println()
+    }
+    for (i in 0 until fil) {
+        for (j in 0 until col) {
+            matrix[j][i] = matriz[i][j]
+
+        }
+    }
+    for (i in 0 until fil) {
+        for (j in 0 until col) {
+            print(matrix[i][j])
+
+        }
+        println()
+    }
+}
