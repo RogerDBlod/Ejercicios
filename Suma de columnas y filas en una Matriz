@@ -1,0 +1,45 @@
+import javax.swing.JOptionPane
+
+
+fun main(args: Array<String>) {
+
+    var col = JOptionPane.showInputDialog("INGRESA EL NUM DE COLUMNAS").toInt()
+    var fil = JOptionPane.showInputDialog("INGRESA EL NUM DE FILAS").toInt()
+
+
+  var arreglo = Array(fil){IntArray(col)}
+   var contador = 0
+    var cont1 = 0
+    for (i in 0 until fil){
+        var cont = 0
+
+
+        for (j in 0 until col){
+            arreglo[i][j]= JOptionPane.showInputDialog("introduce el numero de la fila $i con la columna $j").toInt()
+
+            cont = cont + arreglo[i][j]
+
+
+        }
+        println("La suma de la fila $i = $cont")
+        contador++
+
+        if(i == fil-1){
+            contador = 0
+            for (i in 0 until fil) {
+                cont1 = 0
+                for (j in 0 until col) {
+
+                    cont1 = cont1 + arreglo[j][i]
+
+                }
+                println("La suma de la columna $contador = $cont1")
+                contador++
+            }
+
+        }
+
+    }
+
+
+}
