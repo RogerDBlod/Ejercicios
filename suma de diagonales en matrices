@@ -1,0 +1,48 @@
+import javax.swing.JOptionPane
+
+
+fun main(args: Array<String>) {
+
+    var col = JOptionPane.showInputDialog("INGRESA EL NUM DE COLUMNAS").toInt()
+    var fil = JOptionPane.showInputDialog("INGRESA EL NUM DE FILAS").toInt()
+
+
+    var arreglo = Array(fil) { IntArray(col) }
+    var cont2 = 0
+    for (i in 0 until fil) {
+        for (j in 0 until col) {
+            arreglo[i][j] = 1 + cont2
+            cont2++
+        }
+    }
+    var sum = 0
+    var cont = 0
+    for (i in 0 until fil) {
+        for (j in 0 until col) {
+            if (i == 0) {
+                println("${arreglo[i + cont][j]}")
+                sum = sum + arreglo[i + cont][j]
+                cont++
+
+            }
+        }
+    }
+    println("el resultado de la suma de las diagonal es $sum")
+cont=0
+    sum = 0
+    for (i in fil-1 downTo  0) {
+        for (j in col-1 downTo  0) {
+           print("${arreglo[i][j]},")
+            if (i == fil-1) {
+                println("que hay? ${arreglo[i - cont][j]}")
+                sum = sum + arreglo[i - cont][j]
+               cont++
+
+            }
+
+        }
+        println("")
+    }
+    println("el resultado de la suma de las diagonal alreves es $sum")
+}
+
