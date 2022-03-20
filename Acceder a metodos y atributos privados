@@ -1,0 +1,60 @@
+import javax.swing.JOptionPane
+
+
+fun main(args: Array<String>) {
+
+    var auto1 = Auto()
+    var auto2 = Auto()
+
+
+    auto1.contra(3456,"rojo")
+
+
+}
+
+
+
+
+
+
+class Auto {
+
+   private var color = ""
+    private var año = 0
+    private var marca = ""
+    private var contraseña = 3456
+
+    fun contra(llave:Int,color:String){
+        if(llave == contraseña) {
+            marca = "ford"
+            año= 1949
+
+            println("Tienes las llaves del poder!!!!")
+
+            arrancar()
+            acelerar()
+            frenar("azul")
+
+
+        }else {
+            println("Puedes arrancar pero no acelerar :7!!!!")
+            arrancar()
+        }
+    }
+
+    private fun arrancar(){
+        println("el coche del año $año hace run run carnal")
+    }
+
+   private fun acelerar(){
+        println("nos vamos a estrellar en mi coche de la marca $marca paps")
+    }
+
+    private fun frenar(color: String){
+        println("ni que fueras Rapido y mugroso paps, frenale chingon a mi coche de color $color")
+    }
+}
+
+
+
+
