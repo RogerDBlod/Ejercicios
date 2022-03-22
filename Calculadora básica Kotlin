@@ -1,0 +1,18 @@
+fun main(args: Array<String>) {
+    println("Hello World!")
+
+    // Try adding program arguments via Run/Debug configuration.
+    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
+    println("Program arguments: ${args.joinToString()}")
+
+    var oper = Calculator()
+
+    var num1 = JOptionPane.showInputDialog("ingresa el primer num").toInt()
+    var num2 = JOptionPane.showInputDialog("ingresa el segundo num").toInt()
+
+    println("el resultado de la suma de tus 2 num es ${oper.sum(num1,num2)}")
+    println("el resultado de la resta de tus 2 num es ${oper.rest(num1,num2)}")
+    println("el resultado de la multiplicacion de tus 2 num es ${oper.mult(num1,num2)}")
+    println("el resultado de la divicion de tus 2 num es ${oper.divi(num1,num2)}")
+
+}
