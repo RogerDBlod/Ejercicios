@@ -1,0 +1,39 @@
+fun main(args: Array<String>) {
+
+    var gente = Persona("Felix",35)
+    var gente2 = Persona("negro")
+
+    gente.racism(45)
+
+
+
+
+}
+
+
+
+
+class Persona {
+    var nombre : String? = null
+    var edad :Int? = null
+    var raza : String? = null
+
+    constructor(_nombre:String,_edad:Int){
+        nombre = _nombre
+        edad = _edad
+    }
+
+    constructor(_raza:String){
+        raza = _raza
+    }
+
+
+        fun racism(numComent: Int) {
+
+            if(nombre!= null){ println("$numComent comentarios racista a $nombre con edad de $edad años")
+            }else{
+
+                    println("comentario funador al de raza $raza en total $numComent")
+                }
+            }
+        }
