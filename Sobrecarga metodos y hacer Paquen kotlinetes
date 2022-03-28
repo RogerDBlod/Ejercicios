@@ -1,0 +1,71 @@
+import Matebruticas.Basicas
+import javax.swing.JOptionPane
+
+fun main(args: Array<String>) {
+
+    var gente = Persona("Felix",35)
+    var gente2 = Persona("negro")
+
+    gente.racism(45)
+    gente2.racism(35)
+
+
+    var operadores = Basicas(4,5)
+
+    println("el resultado de tu suma es: ${operadores.suma()}")
+    println("el resultado de tu resta es: ${operadores.rest()}")
+    println("el resultado de tu multiplicacion es: ${operadores.multi()}")
+    println("el resultado de tu division es: ${operadores.divi()}")
+    
+
+}
+
+
+
+class Persona {
+    var nombre : String? = null
+    var edad :Int? = null
+    var raza : String? = null
+
+    constructor(_nombre:String,_edad:Int){
+        nombre = _nombre
+        edad = _edad
+    }
+
+    constructor(_raza:String){
+        raza = _raza
+    }
+
+
+        fun racism(numComent: Int) {
+
+            if(nombre!= null){ println("$numComent comentarios racista a $nombre con edad de $edad años")
+            }else{
+
+                    println("comentario funador al de raza $raza en total $numComent")
+                }
+            }
+        }
+        
+        
+        //Package Basicas
+        
+        class Basicas(num1:Int,num2:Int) {
+    var _num1=num1
+    var _num2=num2
+    fun suma():Int{
+        return _num1 + _num2
+    }
+
+    fun rest():Int{
+        return _num1 - _num2
+    }
+
+    fun multi():Int{
+        return _num1 * _num2
+    }
+
+    fun divi():Double{
+        return _num1.toDouble() / _num2.toDouble()
+    }
+}
