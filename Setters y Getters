@@ -1,0 +1,63 @@
+fun main(args: Array<String>) {
+
+var empleadito = Empleado()
+
+    empleadito.edad = 15
+
+    empleadito.nombre = "Juan"
+
+
+}
+
+
+
+
+
+
+
+//class Empleado {
+    var edad = 0
+        get() = field -2
+        set(value) {
+           println("esta es la edad antes del desmadre: $edad")
+          if(value < 20 && value > 10) { field = value /2
+              println("esta es la edad de tu empleaducho: $edad")}
+           else{
+               println("humano, solo pueden chambear los que esten dentro del rango de edad paps $edad")
+          }
+       }
+
+    var nombre:String? = null
+        get() = field?.toUpperCase()
+        set(value) {
+            println("esta es el nombre antes del desmadre: $nombre")
+            if (value!!.isNotEmpty()){ field = value
+                println("el nombre de tu empleado chingon es $nombre")
+
+            }
+            else{
+                println("Humano bastardo, tienes que ingresar texto cabron")
+            }
+        }
+
+    
+
+    /*fun setEdad(_edad:Int){
+        if(_edad>0 && _edad<20){
+            edad = _edad
+            println("la edad del empleado es de $edad años")
+        }
+    }
+
+    fun get(_nom:String){
+        if(_nom.isEmpty()){
+            println("humano, te falta el nombre paps")
+        } else {
+            nom = _nom
+            println("el nombre de tu empleado es $nom ")
+        }
+    }*/
+
+
+
+}
